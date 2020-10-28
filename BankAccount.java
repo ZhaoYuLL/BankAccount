@@ -3,18 +3,27 @@ public class BankAccount{
   private int accountID;
   private String password;
 
-  public BankAccount(double b, int a, String p){
+  public BankAccount(double b, String p){
     balance = b;
-    accountID = a;
     password = p;
+    balance = 0;
   }
 
   public double getBalance(){
     return balance;
   }
 
-  public int accountID(){
+  public int getAccountID(){
     return accountID;
   }
+
+  public String getPassword(){
+    return password;
+  }
+
+  public void setPassword(String p){
+    password = p;
+  }
+
 
 }
