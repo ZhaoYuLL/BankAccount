@@ -3,8 +3,8 @@ public class BankAccount{
   private int accountID;
   private String password;
 
-  public BankAccount(double b, String p){
-    balance = b;
+  public BankAccount(int id, String p){
+    accountID = id;
     password = p;
     balance = 0;
   }
@@ -25,5 +25,28 @@ public class BankAccount{
     password = p;
   }
 
+  public boolean deposit(double amount){
+    if(amount>0){
+      balance += amount;
+      return true;
+    }else if(amount < 0){
+      return false;
+    }
+    return true;
+  }
+
+  public boolean withdraw(double amount){
+    if(amount > balance || amount < 0){
+      return false;
+    }else if(amount > 0){
+      balance = balance - amount;
+      return true;
+    }
+    return false;
+  }
+
+  public String toString(){
+    return "#" + String.valueOf(accountID) + "\t" + "$" +String.valueOf(balance);
+  }
 
 }
