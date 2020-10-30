@@ -1,4 +1,15 @@
 public class Tester{
+  public static void main(String[] args){
+    BankAccount b1 = new BankAccount(1000, "abc123");
+    BankAccount b2 = new BankAccount(1001, "abc");
+
+    System.out.println(b1.deposit(5000));
+    System.out.println(b2.deposit(5000));
+    System.out.println(b1.transferTo(b2,50.0,"abc123"));
+    System.out.println(b1.getBalance());
+    System.out.println(b2.getBalance());
+
+  }
   //Mr.K's test cases
   // public static void main(String[]args){
   //     BankAccount b1 = new BankAccount(1000001, "abc123");
