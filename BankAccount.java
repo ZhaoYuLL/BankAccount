@@ -2,6 +2,7 @@ public class BankAccount{
   private double balance;
   private int accountID;
   private String password;
+  // comment
 
   public BankAccount(int id, String p){
     accountID = id;
